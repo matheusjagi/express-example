@@ -1,6 +1,3 @@
-// Node.js program to demonstrate the
-// crypto.generateKeyPair() method
-
 // Including generateKeyPair from crypto module
 const { generateKeyPair } = require('crypto');
 

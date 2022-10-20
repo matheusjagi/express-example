@@ -1,13 +1,11 @@
 const express = require('express');
+const crypto = require("crypto");
+const tokenValidation = require("../middleware/token-validation.js");
 
 const app = express();
-const crypto = require("crypto");
-
-const tokenValidation = require("../middleware/token-validation.js");
-app.use(tokenValidation);
-
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(tokenValidation);
 
 const CRYPTOGRAPHY_DATA = {
     cipher : "sha256",
